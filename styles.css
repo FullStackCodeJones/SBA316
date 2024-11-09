@@ -1,0 +1,69 @@
+/* General Styles */
+body {
+  color: rgb(237, 84, 110);
+  font-family: Arial, sans-serif;
+  background-color: rgb(253, 184, 56);
+}
+
+h1 {
+  animation: fadeIn 2s ease-in-out;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+h2 {
+  color: rgb(237, 84, 110);
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  text-decoration: none;
+  color: white;
+  background-color: rgb(237, 84, 110);
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.button:hover {
+  background-color: rgb(200, 60, 90);
+  transform: scale(1.05);
+}
+
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.program {
+  background-color: rgb(253, 184, 56);
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 20px 0;
+  padding: 15px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: rgb(253, 184, 56);
+}
+
+/* Title Style */
+.title {
+  color: teal;
+  font-size: 2em;
+}
