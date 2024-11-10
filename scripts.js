@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const selectedProgram = programDropdown.value;
     if (selectedProgram) {
       const selectedDesc = document.getElementById(`${selectedProgram}-desc`);
-      selectedDesc.classList.add("show"); // Add the show class to fade it in
+      selectedDesc.classList.add("show");
     }
 
     // Smooth scroll to description section
@@ -35,8 +35,8 @@ document.addEventListener("DOMContentLoaded", function () {
       event.preventDefault();
       alert("Please select a program before submitting!");
     } else {
-      event.preventDefault(); // Prevent form submission for demo
-      successMessage.style.display = "block"; // Show success message
+      event.preventDefault();
+      successMessage.style.display = "block";
     }
   });
 });
