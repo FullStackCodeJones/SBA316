@@ -7,103 +7,123 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- Header Section -->
-    <h1 class="text-center" style="color: teal">🏡 SISSIES HOUSE 🏡</h1>
-
-    <!-- Navbar Section (Buttons) -->
-    <div class="text-center">
-      <a href="index.html" class="button">Home</a>
-      <a href="about.html" class="button">About Us</a>
-      <a href="programs.html" class="button">Programs</a>
-      <a href="get_involved.html" class="button">Get Involved</a>
-    </div>
-
-    <!-- Main Content Section -->
     <div class="container">
-      <h2 class="text-center" style="color: #f77f00">Get Involved</h2>
-      <p class="text-center" style="color: #6b3f71">
+      <header>
+        <h1>🏡S.I.S.S.I.E.S HOUSE🏡</h1>
+      </header>
+
+      <!-- Introduction Text -->
+      <p class="intro-text">
         A space for all the Sissies (and Family) to feel at Home. Welcome HOME!
       </p>
 
-      <section class="house-description">
-        <p class="text-center" style="color: pink">
+      <p
+        id="last-updated"
+        class="text-center"
+        style="font-size: 1.2em; color: teal"
+      ></p>
+
+      <!-- House Program Section -->
+      <section class="house-program-section">
+        <p class="vibe-text">
           It's not just a house, it's a Vibe. And a Vibe we’re all about here at
           Sissies House!
         </p>
-        <p class="text-center" style="color: teal">
-          We make sure that everyone feels at home here. From laughter 😂 to
-          hard conversations 🥹, we've got you covered!
-        </p>
+
+        <form id="program-form">
+          <label for="program" aria-label="Select a Program"
+            >Select a Program...</label
+          >
+
+          <!-- Dropdown with Icons -->
+          <select id="program" name="program" class="form-select mb-3" required>
+            <option value="">Choose a program</option>
+            <option value="emergency">
+              Emergency Shelter
+              <img
+                src="house-icon.png"
+                alt="Emergency Shelter Icon"
+                class="program-icon"
+              />
+            </option>
+            <option value="transitional">
+              Transitional Housing
+              <img
+                src="house-icon.png"
+                alt="Transitional Housing Icon"
+                class="program-icon"
+              />
+            </option>
+            <option value="support">
+              Support Services
+              <img
+                src="house-icon.png"
+                alt="Support Services Icon"
+                class="program-icon"
+              />
+            </option>
+          </select>
+
+          <button type="submit" class="button">Submit</button>
+        </form>
+
+        <!-- Program Descriptions Section -->
+        <div id="program-description" class="mt-3">
+          <div id="emergency-desc" class="program-desc">
+            <p>
+              Our Emergency Shelter provides a safe and supportive environment
+              for individuals and families in immediate crisis. We offer
+              temporary housing, basic necessities, and case management services
+              to help residents regain stability.
+            </p>
+          </div>
+          <div id="transitional-desc" class="program-desc">
+            <p>
+              Our Transitional Housing program helps individuals and families
+              who are ready to move beyond emergency shelter. We provide stable
+              housing options, access to education, employment, and other
+              resources to support long-term success.
+            </p>
+          </div>
+          <div id="support-desc" class="program-desc">
+            <p>
+              Our Support Services include counseling, legal assistance, and job
+              readiness programs to help clients develop the skills and
+              resources needed to thrive in the community.
+            </p>
+          </div>
+        </div>
       </section>
 
-      <!-- Program Selection Section -->
-      <form id="program-form" class="text-center">
-        <label for="program">Select a Program...</label>
-        <select id="program" name="program" class="form-select mb-3" required>
-          <option value="">--Select a Program--</option>
-          <option value="shelter">Emergency Shelter</option>
-          <option value="counseling">Counseling Services</option>
-          <option value="legal">Legal Assistance</option>
-          <option value="support">Support Groups</option>
-          <option value="financial">Financial Literacy Workshops</option>
-          <option value="advocacy">Advocacy and Outreach</option>
-          <option value="children">Children’s Programs</option>
-        </select>
-
-        <!-- Program Description Section -->
-        <div id="program-description" class="mt-3">
-          <p id="shelter-desc" class="program-desc" style="display: none">
-            <strong>Emergency Shelter:</strong> Our Emergency Shelter provides a
-            safe and supportive environment for individuals and families in
-            immediate crisis. We offer temporary housing, basic necessities, and
-            case management services to help residents regain stability.
-          </p>
-          <p id="counseling-desc" class="program-desc" style="display: none">
-            <strong>Counseling Services:</strong> Our professional counseling
-            services offer emotional and psychological support for those coping
-            with trauma, stress, or mental health challenges.
-          </p>
-          <p id="legal-desc" class="program-desc" style="display: none">
-            <strong>Legal Assistance:</strong> The Legal Assistance program
-            provides guidance for those facing legal challenges, especially in
-            cases involving family law, eviction prevention, and protective
-            orders.
-          </p>
-          <p id="support-desc" class="program-desc" style="display: none">
-            <strong>Support Groups:</strong> Our support groups bring together
-            individuals who share similar life experiences, offering a safe
-            space to connect and find strength in community.
-          </p>
-          <p id="financial-desc" class="program-desc" style="display: none">
-            <strong>Financial Literacy Workshops:</strong> These workshops are
-            designed to empower individuals with the skills needed for financial
-            independence.
-          </p>
-          <p id="advocacy-desc" class="program-desc" style="display: none">
-            <strong>Advocacy and Outreach:</strong> Our Advocacy and Outreach
-            program raises awareness about issues affecting our community, such
-            as domestic violence and homelessness.
-          </p>
-          <p id="children-desc" class="program-desc" style="display: none">
-            <strong>Children’s Programs:</strong> Focusing on the well-being and
-            development of children, our programs offer educational support,
-            recreational activities, and counseling.
-          </p>
-        </div>
-        <br /><br />
-        <button type="submit" class="button">Submit</button>
-      </form>
+      <!-- Success Message -->
+      <div
+        id="success-message"
+        style="
+          display: none;
+          text-align: center;
+          color: green;
+          font-size: 1.2em;
+        "
+      >
+        Thank you for selecting a program!
+      </div>
     </div>
 
-    <!-- Footer Section -->
-    <footer class="text-center" style="color: #222">
-      <p>
-        &copy; 2024 Sissies House - Where Love, Fun, and a little Sass live
-        together.
-      </p>
+    <script src="scripts.js"></script>
+    <footer
+      style="
+        text-align: center;
+        padding: 20px;
+        background-color: rgb(253, 184, 56, 0.5);
+        color: white;
+      "
+    >
+      <p>&copy; <span id="year"></span> Sissies House. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript Section -->
-    <script src="scripts.js"></script>
+    <script>
+      // Get the current year and set it inside the span with the id "year"
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
